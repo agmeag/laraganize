@@ -2285,6 +2285,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2460,10 +2461,10 @@ __webpack_require__.r(__webpack_exports__);
 
       this.image = this.files[this.index] ? this.baseUrl + this.files[this.index].basename : null; // }
     },
-    buildCurrent: function buildCurrent() {
+    buildCurrent: function buildCurrent(i) {
       this.current_files = [];
 
-      for (var i = this.index; i < this.index + 5; i++) {
+      for (var i = i - 1; i < this.index + 5; i++) {
         if (this.files[i]) {
           var obj = {
             index: i,
@@ -2546,9 +2547,6 @@ __webpack_require__.r(__webpack_exports__);
             return element.index === _this3.index;
           });
 
-          _this3.current_files.splice(ind2, 1); // this.index += 1;
-
-
           if (_this3.files.length == _this3.index) {
             _this3.index = _this3.files.length - 1;
           }
@@ -2558,6 +2556,8 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         _this3.loading = false;
+
+        _this3.buildCurrent(i);
       })["catch"](function (error) {
         _this3.loading = false;
         window.console.log(error);
@@ -7004,7 +7004,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n* {\r\n    transition: all 0.3s;\n}\n.inner-content {\r\n    background-color: rgba(0, 0, 0, 0.85);\r\n    width: 100%;\r\n    height: 100%;\r\n    min-height: 100%;\r\n    min-width: 100%;\r\n    margin: 0;\r\n    padding: 0;\r\n    overflow: hidden;\n}\n.btn-cnt {\r\n    display: flex;\r\n    flex-grow: 1;\r\n    text-align: center;\r\n    cursor: pointer;\r\n    padding-top: 20px;\r\n    padding-bottom: 20px;\r\n    justify-content: center;\r\n    align-items: center;\r\n    /* padding: 10px; */\n}\n.btn-cnt:hover {\r\n    background-color: #fff;\r\n    color: #263238;\n}\n.btn-div {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: white;\r\n    font-size: 1.5rem;\n}\n.folders {\r\n    width: 260px;\r\n    height: 100%;\r\n    min-height: 100%;\r\n    overflow-y: auto;\r\n    background-color: #0000009e;\n}\n.btn-folder {\r\n    font-size: 1.05rem;\r\n    color: #625a5a;\r\n    font-weight: bolder;\r\n    text-transform: uppercase;\r\n    border-top: 3px solid #00000073;\r\n    cursor: pointer;\r\n    text-align: center;\n}\n.btn-folder:hover {\r\n    /* background-color: white; */\r\n    color: white;\n}\n.img-section {\r\n    display: flex;\r\n    height: 100%;\r\n    min-height: 100%;\n}\n* {\r\n    transition: all 0.3s;\n}\n.img-cnt {\r\n    width: 100%;\r\n    text-align: center;\r\n    height: 100%;\r\n    min-height: 100%;\n}\n.single-img {\r\n    width: 100%;\r\n    height: 100%;\r\n    -o-object-fit: contain;\r\n       object-fit: contain;\n}\n.imgs-footer-section {\r\n    width: 100%;\r\n    height: 145px;\r\n    display: flex;\r\n    overflow-y: hidden;\r\n    overflow-x: auto;\r\n    justify-content: center;\r\n    align-items: center;\r\n    min-height: 116px;\r\n    background-color: #0000009e;\r\n    position: fixed;\r\n    z-index: 100;\r\n    bottom: 0;\n}\n.multiple-img {\r\n    width: 100%;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    height: 100%;\n}\n.multiple-img-cnt {\r\n    height: 100px;\r\n    width: 150px;\n}\n.multiple-img:hover {\r\n    cursor: pointer;\n}\n#selection-folder-btn {\r\n    display: none;\n}\n.mobile {\r\n    display: none;\n}\n.folder-selected {\r\n    text-align: center;\r\n    color: rgb(56, 56, 56);\r\n    background-color: white;\r\n    border-radius: 12px;\r\n    width: 80%;\r\n    text-align: center;\r\n    font-weight: bolder;\r\n    font-size: 1.2rem;\r\n    justify-content: center;\r\n    align-items: center;\r\n    text-transform: capitalize;\n}\n.folder-selected-cnt {\r\n    justify-content: center;\r\n    align-items: center;\n}\n@media (max-width: 768px) {\n.desktop {\r\n        display: none;\n}\n.img-cnt {\r\n        height: auto;\n}\n.img-section {\r\n        display: flex;\r\n        height: calc(100% - 370px);\r\n        min-height: calc(100% - 370px);\n}\n#selection-folder-btn {\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        flex-grow: 1;\n}\n.mobile {\r\n        display: flex;\n}\n.folders {\r\n        flex-direction: column;\r\n        width: 100%;\r\n        height: calc(100%-200px);\n}\n.btn-folder {\r\n        padding-top: 10px;\r\n        padding-bottom: 10px;\r\n        text-align: center;\n}\n.folder-selected {\r\n        display: flex;\n}\n.folder-selected-cnt {\r\n        display: flex;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n* {\r\n    transition: all 0.3s;\n}\n.inner-content {\r\n    background-color: rgba(0, 0, 0, 0.85);\r\n    width: 100%;\r\n    height: 100%;\r\n    min-height: 100%;\r\n    min-width: 100%;\r\n    margin: 0;\r\n    padding: 0;\r\n    overflow: hidden;\n}\n.btn-cnt {\r\n    display: flex;\r\n    flex-grow: 1;\r\n    text-align: center;\r\n    cursor: pointer;\r\n    padding-top: 20px;\r\n    padding-bottom: 20px;\r\n    justify-content: center;\r\n    align-items: center;\r\n    /* padding: 10px; */\n}\n.btn-cnt:hover {\r\n    background-color: #fff;\r\n    color: #263238;\n}\n.btn-div {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: white;\r\n    font-size: 1.5rem;\n}\n.folders {\r\n    width: 260px;\r\n    height: calc(100% - 315px);\r\n    min-height: calc(100% - 315px);\r\n    overflow-y: auto;\r\n    background-color: #0000009e;\n}\n.btn-folder {\r\n    font-size: 1.05rem;\r\n    color: #625a5a;\r\n    font-weight: bolder;\r\n    text-transform: uppercase;\r\n    border-top: 3px solid #00000073;\r\n    cursor: pointer;\r\n    text-align: center;\n}\n.btn-folder:hover {\r\n    /* background-color: white; */\r\n    color: white;\n}\n.img-section {\r\n    display: flex;\r\n    height: 100%;\r\n    min-height: 100%;\n}\n* {\r\n    transition: all 0.3s;\n}\n.img-cnt {\r\n    width: 100%;\r\n    text-align: center;\r\n    height: 100%;\r\n    min-height: 100%;\n}\n.single-img {\r\n    width: 100%;\r\n    height: 100%;\r\n    -o-object-fit: contain;\r\n       object-fit: contain;\n}\n.imgs-footer-section {\r\n    width: 100%;\r\n    height: 145px;\r\n    display: flex;\r\n    overflow-y: hidden;\r\n    overflow-x: auto;\r\n    justify-content: center;\r\n    align-items: center;\r\n    min-height: 116px;\r\n    background-color: #0000009e;\r\n    position: fixed;\r\n    z-index: 100;\r\n    bottom: 0;\n}\n.multiple-img {\r\n    width: 100%;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    height: 100%;\n}\n.multiple-img-cnt {\r\n    height: 100px;\r\n    width: 150px;\n}\n.multiple-img:hover {\r\n    cursor: pointer;\n}\n#selection-folder-btn {\r\n    display: none;\n}\n.mobile {\r\n    display: none;\n}\n.folder-selected {\r\n    text-align: center;\r\n    color: rgb(56, 56, 56);\r\n    background-color: white;\r\n    border-radius: 12px;\r\n    width: 80%;\r\n    text-align: center;\r\n    font-weight: bolder;\r\n    font-size: 1.2rem;\r\n    justify-content: center;\r\n    align-items: center;\r\n    text-transform: capitalize;\n}\n.folder-selected-cnt {\r\n    justify-content: center;\r\n    align-items: center;\n}\n@media (max-width: 768px) {\n.desktop {\r\n        display: none;\n}\n.img-cnt {\r\n        height: auto;\n}\n.img-section {\r\n        display: flex;\r\n        height: calc(100% - 370px);\r\n        min-height: calc(100% - 370px);\n}\n#selection-folder-btn {\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        flex-grow: 1;\n}\n.mobile {\r\n        display: flex;\n}\n.folders {\r\n        flex-direction: column;\r\n        width: 100%;\r\n        height: 522px;\r\n        overflow-y: scroll;\n}\n.btn-folder {\r\n        padding-top: 10px;\r\n        padding-bottom: 10px;\r\n        text-align: center;\n}\n.folder-selected {\r\n        display: flex;\n}\n.folder-selected-cnt {\r\n        display: flex;\n}\n}\r\n", ""]);
 
 // exports
 

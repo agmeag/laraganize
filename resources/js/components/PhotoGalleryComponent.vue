@@ -195,8 +195,8 @@
 
 .folders {
     width: 260px;
-    height: 100%;
-    min-height: 100%;
+    height: calc(100% - 315px);
+    min-height: calc(100% - 315px);
     overflow-y: auto;
     background-color: #0000009e;
 }
@@ -324,7 +324,8 @@
     .folders {
         flex-direction: column;
         width: 100%;
-        height: calc(100%-200px);
+        height: 522px;
+        overflow-y: scroll;
     }
 
     .btn-folder {
@@ -543,9 +544,9 @@ export default {
             // }
         },
 
-        buildCurrent() {
+        buildCurrent(i) {
             this.current_files = [];
-            for (var i = this.index; i < this.index + 5; i++) {
+            for (var i = i - 1; i < this.index + 5; i++) {
                 if (this.files[i]) {
                     let obj = {
                         index: i,
@@ -623,8 +624,6 @@ export default {
                         let ind2 = this.current_files.findIndex(
                             (element) => element.index === this.index
                         );
-                        this.current_files.splice(ind2, 1);
-                        // this.index += 1;
                         if (this.files.length == this.index) {
                             this.index = this.files.length - 1;
                         }
@@ -634,6 +633,7 @@ export default {
                             : null;
                     }
                     this.loading = false;
+                    this.buildCurrent(i);
                 })
                 .catch((error) => {
                     this.loading = false;
