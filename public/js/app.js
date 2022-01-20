@@ -2308,85 +2308,57 @@ __webpack_require__.r(__webpack_exports__);
         index: null
       },
       folders: [{
-        text: "University",
-        url: "/UNIVERSITY",
-        name: "UNIVERSITY"
-      }, {
-        text: "Michelle",
-        url: "/MICHELLE",
-        name: "MICHELLE"
-      }, {
-        text: "Medical",
-        url: "/MEDICAL",
-        name: "MEDICAL"
-      }, {
-        text: "Family",
-        url: "/FAMILY",
-        name: "FAMILY"
-      }, {
-        text: "Friends",
-        url: "/FRIENDS",
-        name: "FRIENDS"
-      }, {
-        text: "Ideas",
-        url: "/IDEAS",
-        name: "IDEAS"
-      }, {
-        text: "UI",
-        url: "/UI",
-        name: "UI"
-      }, {
-        text: "Me",
-        url: "/ME",
-        name: "ME"
-      }, {
-        text: "Memes",
+        text: "MEMES",
         url: "/MEMES",
-        name: "MEME"
+        name: "MEMES"
       }, {
-        text: "PC Help Tools",
-        url: "/PC_HELP_TOOLS",
-        name: "PC"
+        text: "FAMILIA",
+        url: "/FAMILIA",
+        name: "FAMILIA"
       }, {
-        text: "Work",
-        url: "/WORK",
-        name: "WORK"
+        text: "VIAJES",
+        url: "/VIAJES",
+        name: "VIAJES"
       }, {
-        text: "Games",
-        url: "/GAMES",
-        name: "GAMES"
+        text: "FLORES",
+        url: "/FLORES",
+        name: "FLORES"
       }, {
-        text: "Famdocs",
-        url: "/FAMDOCS",
-        name: "FAMDOC"
+        text: "CACHOS",
+        url: "/CACHOS",
+        name: "CACHOS"
       }, {
-        text: "Grad",
-        url: "/GRAD_2021",
-        name: "GRAD_2021"
+        text: "ARQUI",
+        url: "/ARQUI",
+        name: "ARQUI"
       }, {
-        text: "Birthday 2021",
-        url: "/BIRTHDAY_2021",
-        name: "BIRTHDAY_2021"
+        text: "YO",
+        url: "/YO",
+        name: "YO"
       }, {
-        text: "Birthday Mano",
-        url: "/BIRTHDAY_CARLOS_2021",
-        name: "BIRTHDAY_CARLOS_2021"
-      }, {
-        text: "Fotos Astrid Mano",
-        url: "/ASTRID_CARLOS",
-        name: "ASTRID_CARLOS"
-      }, {
-        text: "TE BODA",
-        url: "/TE_BODA_AVILES_ALVARADO",
-        name: "TE_BODA_AVILES_ALVARADO"
-      }, {
-        text: "Boda Aviles Alvarado",
-        url: "/BODA_AVILES_ALVARADO_2022",
-        name: "BODA_AVILES_ALVARADO_2022"
+        text: "MIGUE",
+        url: "/MIGUE",
+        name: "MIGUE"
       }, {
         text: "MISC",
         url: "/MISC",
         name: "MISC"
+      }, {
+        text: "GRUPOS",
+        url: "/GRUPOS",
+        name: "GRUPOS"
+      }, {
+        text: "EXES",
+        url: "/EXES",
+        name: "EXES"
+      }, {
+        text: "AMIGOS",
+        url: "/AMIGOS",
+        name: "AMIGOS"
+      }, {
+        text: "CIELO",
+        url: "/CIELO",
+        name: "CIELO"
       }]
     };
   },
