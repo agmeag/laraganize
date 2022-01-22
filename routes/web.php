@@ -24,3 +24,8 @@ Route::get("/photo-gallery", 'PhotoGalleryController@view');
 Route::get("/photo-gallery/get_files", "PhotoGalleryController@getFileList");
 Route::post("/photo-gallery/delete_file", "PhotoGalleryController@deleteFile");
 Route::post("/photo-gallery/move-file", "PhotoGalleryController@moveFile");
+
+Route::get("/gallery_", 'GalleryController@view');
+Route::get("/gallery_/get_files", "GalleryController@getFileList");
+
+

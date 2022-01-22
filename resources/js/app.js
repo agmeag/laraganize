@@ -26,6 +26,7 @@ Vue.use(Vuetify);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('photo-gallery-component', require('./components/PhotoGalleryComponent.vue').default);
+Vue.component('gallery-component', require('./components/GalleryComponent.vue').default);
 
 const app = new Vue({
     el: '#app',
